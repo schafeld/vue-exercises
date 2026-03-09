@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js App</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" crossorigin></script>
+</head>
+<body>
+    <h1>Welcome to Vue.js App</h1>
+    <div class="static-content">
+        <p>This content is static and will <em>not</em> be managed by Vue.js.</p>
+    </div>
+
+    <div id="app">
+        <!-- Vue 3 will render content here -->
+        <p>Message: {{ message }}</p>
+    </div>
+    
+    
+    <script type="text/javascript">
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue 3!'
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
